@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { api } from '../services/api';
 
 export const getPosts = async () => {
@@ -25,3 +26,24 @@ export const getPostBySlug = async (id) => {
 
   return {};
 };
+=======
+import { api } from '../services/api'
+
+export const getPosts = async () => {
+    const {data} = await api.get('/posts'); 
+
+    if(data){
+        return data;
+    }
+
+    return []
+}
+
+export const getPostBySlug = async (id) => {
+
+    //TODO: BUSCAR UM POST EM ESPECIFICO.
+    //const {data} = await api.get(`/post?id=eq.${id}`)
+
+    return {}
+}
+>>>>>>> a730ee8e8d31a2c66e731f7005b19ecf808fa17a
